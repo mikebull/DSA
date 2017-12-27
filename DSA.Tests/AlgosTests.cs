@@ -1,4 +1,5 @@
 ﻿using Algos;
+using DSA.Algos;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
