@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="AlgosTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectionSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

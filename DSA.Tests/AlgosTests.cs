@@ -12,30 +12,29 @@ namespace DSA.Tests
     public class AlgosTests
     {
 
-        private static IEnumerable<TestCaseData> OrderedArrays()
+        public static IEnumerable<TestCaseData> UnorderedToOrderedTestCases()
         {
-            yield return new TestCaseData(Enumerable.Range(1, 100).ToArray(), 50, true);
-            yield return new TestCaseData(Enumerable.Range(1, 100).ToArray(), 100, true);
-            yield return new TestCaseData(Enumerable.Range(1, 100).ToArray(), 1, true);
-            yield return new TestCaseData(Enumerable.Range(1, 100).ToArray(), 0, false);
-            yield return new TestCaseData(Enumerable.Range(1, 100).ToArray(), 101, false);
+            yield return new TestCaseData(new int[] { 0 }).Returns(new int[] { 0 });
+            yield return new TestCaseData(new int[] { 1, 0 }).Returns(new int[] { 0, 1 });
+            yield return new TestCaseData(new int[] { 1, 0, 2 }).Returns(new int[] { 0, 1, 2 });
+            yield return new TestCaseData(new int[] { 5, 2, 1, 0 }).Returns(new int[] { 0, 1, 2, 5 });
+
         }
+
+        [Test, TestCaseSource("UnorderedToOrderedTestCases")]
+        public int[] BubbleSortReturnsSortedArray(int[] arr) => BubbleSort.Run(arr);
 
         [Test]
-        [TestCase(new int[] { 0 }, new int[] { 0 })]
-        [TestCase(new int[] { 1, 0 }, new int[] { 0, 1 })]
-        [TestCase(new int[] { 1, 0, 2}, new int[] { 0, 1, 2 })]
-        [TestCase(new int[] { 1, 0, 2, 5}, new int[] { 0, 1, 2, 5 })]
-        public void BubbleSortReturnsSortedArray(int[] arr, int[] expected)
+        [TestCase(51, true)]
+        [TestCase(41, true)]
+        [TestCase(1, true)]
+        [TestCase(100, true)]
+        [TestCase(0, false)]
+        [TestCase(101, false)]
+        public void BinarySearchReturnsTargetValue(int target, bool expected)
         {
-            int[] result = BubbleSort.Run(arr);
-            Assert.AreEqual(result, expected);
-        }
-
-        [Test, TestCaseSource( "OrderedArrays" )]
-        public void BinarySearchReturnsTargetValue(int[] arr, int target, bool expected)
-        {
-            bool result = BinarySearch.Run(arr, target);
+            int[] orderedArray = Enumerable.Range(1, 100).ToArray();
+            bool result = BinarySearch.Run(orderedArray, target);
             Assert.AreEqual(expected, result);
         }
 
