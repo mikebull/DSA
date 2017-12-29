@@ -22,6 +22,9 @@ namespace DSA.Tests
         }
 
         [Test, TestCaseSource("UnorderedToOrderedTestCases")]
+        public int[] InsertionSortReturnsSortedArray(int[] arr) => InsertionSort.Run(arr);
+
+        [Test, TestCaseSource("UnorderedToOrderedTestCases")]
         public int[] SelectionSortReturnsSortedArray(int[] arr) => SelectionSort.Run(arr);
 
         [Test, TestCaseSource("UnorderedToOrderedTestCases")]
