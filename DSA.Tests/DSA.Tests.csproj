@@ -53,10 +53,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Algos\Algos.csproj">
-      <Project>{5c9e0167-5448-48f3-ba31-305bcb6d7707}</Project>
-      <Name>Algos</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DSA\DSA.csproj">
       <Project>{D09D532A-0FE3-46FE-9B22-C8286DB87619}</Project>
       <Name>DSA</Name>
