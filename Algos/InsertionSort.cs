@@ -21,7 +21,6 @@ namespace Algos
                     arr[shiftMarker] = arr[shiftMarker - 1];
                     shiftMarker--;
                 }
-                
                 arr[shiftMarker] = temp; //insert element into sorted position
             }
             return arr;
