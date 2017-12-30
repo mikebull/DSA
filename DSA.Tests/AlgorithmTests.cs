@@ -1,5 +1,4 @@
-﻿using Algos;
-using DSA.Algos;
+﻿using DSA.Algorithms;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -10,7 +9,7 @@ using System.Threading.Tasks;
 namespace DSA.Tests
 {
     [TestFixture]
-    public class AlgosTests
+    public class AlgorithmTests
     {
 
         public static IEnumerable<TestCaseData> UnorderedToOrderedTestCases()
