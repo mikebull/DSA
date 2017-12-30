@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DSA.Tests
 {
     [TestFixture]
-    public class AlgorithmTests
+    public class AlgorithmsTests
     {
 
         public static IEnumerable<TestCaseData> UnorderedToOrderedTestCases()

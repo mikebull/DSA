@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA.Algorithms
+﻿namespace DSA.Algorithms
 {
     public static class BinarySearch
     {
         public static bool Run(int[] arr, int target)
         {
-            int floor = arr.First();
+            int floor = arr[0];
             int ceiling = arr.Length;
                 
             while (true && floor <= ceiling)
