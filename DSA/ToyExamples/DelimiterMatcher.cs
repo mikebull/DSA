@@ -8,5 +8,6 @@ namespace DSA.ToyExamples
 {
     public class DelimiterMatcher
     {
+        //Checks balance of delimiting characters in a string using LIFO stack
     }
 }
