@@ -1,32 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA.DataStructures
+﻿namespace DSA.DataStructures
 {
-    public class MyStack
+    public class MyLIFOStack
     {
-        private int _top = 0;
-        private string[] _element = new string[2];
+        private string[] elements;
+        private int top = -1;
+
+        public MyLIFOStack(int size)
+        {
+            elements = new string[size];
+        }
+
+        public bool IsEmpty()
+        {
+            if (top == -1) return true;
+            else return false;
+        }
 
         public void Push(string element)
         {
-            _element[_top] = element;
-            _top++;
+            top++;
+            elements[top] = element;
         }
 
         public string Peek()
         {
-            if (_top == 0) return _element[_top];
-            else return _element[_top - 1];
+            if (this.IsEmpty()) return null;
+            else return elements[top];
         }
 
-        public void Pop()
+        public string Pop()
         {
-            _element[_top - 1] = null;
-            _top--;
+            if (this.IsEmpty()) return null;
+            return elements[top--] = null;
         }
     }
 }
