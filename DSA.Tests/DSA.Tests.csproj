@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinarySearchTests.cs" />
+    <Compile Include="DelimiterMatcherTests.cs" />
     <Compile Include="SortTests.cs" />
     <Compile Include="LIFOStackTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
