@@ -1,13 +1,16 @@
-﻿namespace DSA.DataStructures
+﻿using System;
+
+namespace DSA.DataStructures
 {
-    public class MyLIFOStack
+    public class LIFOStack
     {
         private string[] elements;
         private int top = -1;
 
-        public MyLIFOStack(int size)
+        public LIFOStack(int size)
         {
-            elements = new string[size];
+            if (size > 0) elements = new string[size];
+            else throw new ArgumentException("Size must be > 0"); 
         }
 
         public bool IsEmpty()

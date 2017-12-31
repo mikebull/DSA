@@ -1,5 +1,6 @@
 ﻿using DSA.DataStructures;
 using NUnit.Framework;
+using NUnit.Framework.Constraints;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,19 +10,19 @@ using System.Threading.Tasks;
 namespace DSA.Tests
 {
     [TestFixture]
-    public class DataStructureTests
+    public class LIFOStackTests
     {
         [Test]
         public void PushSucceeds()
         {
-            MyLIFOStack Stack = new MyLIFOStack(10);
+            LIFOStack Stack = new LIFOStack(10);
             Stack.Push("a");
         }
 
         [Test]
         public void PushAPeekReturnsA()
         {
-            MyLIFOStack stack = new MyLIFOStack(10);
+            LIFOStack stack = new LIFOStack(10);
             string element = "a";
 
             stack.Push(element);
@@ -33,7 +34,7 @@ namespace DSA.Tests
         [Test]
         public void PushAPopPeekReturnsNull()
         {
-            MyLIFOStack stack = new MyLIFOStack(10);
+            LIFOStack stack = new LIFOStack(10);
 
             stack.Push("a");
             stack.Pop();
@@ -45,7 +46,7 @@ namespace DSA.Tests
         [Test]
         public void PushAPushBPopPeekReturnsA()
         {
-            MyLIFOStack stack = new MyLIFOStack(10);
+            LIFOStack stack = new LIFOStack(10);
 
             string firstPush = "a";
             string secondPush = "b";
@@ -61,7 +62,7 @@ namespace DSA.Tests
         [Test]
         public void PushPushPushPushPopPopPeekkReturnsSecondPush()
         {
-            MyLIFOStack stack = new MyLIFOStack(10);
+            LIFOStack stack = new LIFOStack(10);
 
             string firstPush = "a";
             string secondPush = "b";
@@ -81,7 +82,7 @@ namespace DSA.Tests
         [Test]
         public void PopEmptyStackReturnsNull()
         {
-            MyLIFOStack stack = new MyLIFOStack(10);
+            LIFOStack stack = new LIFOStack(10);
 
             string result = stack.Pop();
         }
@@ -89,7 +90,7 @@ namespace DSA.Tests
         [Test]
         public void IsEmptyReturnsFalseForEmptyStack()
         {
-            MyLIFOStack stack = new MyLIFOStack(10);
+            LIFOStack stack = new LIFOStack(10);
             bool response = stack.IsEmpty();
             Assert.IsTrue(response);
         }
@@ -97,10 +98,18 @@ namespace DSA.Tests
         [Test]
         public void IsEmptyReturnsTrueForNonEmptyStack()
         {
-            MyLIFOStack stack = new MyLIFOStack(10);
+            LIFOStack stack = new LIFOStack(10);
             stack.Push("a");
             bool response = stack.IsEmpty();
             Assert.IsFalse(response);
+        }
+
+        [Test]
+        public void InstantiationOfStackWithLessOneThrowsException()
+        {
+            void a() => new LIFOStack(-1);
+
+            Assert.Throws(typeof(ArgumentException), new TestDelegate(a));
         }
     }
 }

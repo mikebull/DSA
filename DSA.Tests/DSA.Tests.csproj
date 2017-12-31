@@ -46,8 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlgorithmsTests.cs" />
-    <Compile Include="DataStructureTests.cs" />
+    <Compile Include="BinarySearchTest.cs" />
+    <Compile Include="SortTests.cs" />
+    <Compile Include="LIFOStackTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
