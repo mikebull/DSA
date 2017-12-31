@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DSA.Tests
 {
     [TestFixture]
-    public class BinarySearchTest
+    public class BinarySearchTests
     {
         [Test]
         [TestCase(51, true)]
@@ -21,7 +21,7 @@ namespace DSA.Tests
         public void BinarySearchReturnsTargetValue(int target, bool expected)
         {
             int[] orderedArray = Enumerable.Range(1, 100).ToArray();
-            bool result = BinarySearch.Run(orderedArray, target);
+            bool result = MyBinarySearch.BinarySearch(orderedArray, target);
             Assert.AreEqual(expected, result);
         }
     }

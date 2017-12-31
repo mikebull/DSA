@@ -46,10 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinarySearchTest.cs" />
+    <Compile Include="BinarySearchTests.cs" />
     <Compile Include="SortTests.cs" />
     <Compile Include="LIFOStackTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringReverserTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

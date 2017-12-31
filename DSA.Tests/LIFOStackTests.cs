@@ -20,6 +20,17 @@ namespace DSA.Tests
         }
 
         [Test]
+        public void PushPopReturnsCorrectValue()
+        {
+            LIFOStack Stack = new LIFOStack(10);
+            string push = "a";
+            Stack.Push(push);
+            string result = Stack.Pop();
+
+            Assert.AreEqual(push, result);
+        }
+
+        [Test]
         public void PushAPeekReturnsA()
         {
             LIFOStack stack = new LIFOStack(10);

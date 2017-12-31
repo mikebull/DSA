@@ -1,8 +1,8 @@
 ﻿namespace DSA.Algorithms
 {
-    public static class BinarySearch
+    public static class MyBinarySearch
     {
-        public static bool Run(int[] arr, int target)
+        public static bool BinarySearch(int[] arr, int target)
         {
             int floor = arr[0];
             int ceiling = arr.Length;

@@ -34,7 +34,9 @@ namespace DSA.DataStructures
         public string Pop()
         {
             if (this.IsEmpty()) return null;
-            return elements[top--] = null;
+            string temp = elements[top];
+            elements[top--] = null;
+            return temp;
         }
     }
 }

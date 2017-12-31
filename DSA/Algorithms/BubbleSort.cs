@@ -1,8 +1,8 @@
 ﻿namespace DSA.Algorithms
 {
-    public static class BubbleSort
+    public static class MyBubbleSort
     {
-        public static int[] Run(int[] arr)
+        public static int[] BubbleSort(int[] arr)
         {
             for(int i = arr.Length - 1; i > 0; i--)
             {

@@ -20,12 +20,12 @@ namespace DSA.Tests
         }
 
         [Test, TestCaseSource("UnorderedToOrderedTestCases")]
-        public int[] InsertionSortReturnsSortedArray(int[] arr) => InsertionSort.Run(arr);
+        public int[] InsertionSortReturnsSortedArray(int[] arr) => MyInsertionSort.InsertionSort(arr);
 
         [Test, TestCaseSource("UnorderedToOrderedTestCases")]
-        public int[] SelectionSortReturnsSortedArray(int[] arr) => SelectionSort.Run(arr);
+        public int[] SelectionSortReturnsSortedArray(int[] arr) => MySelectionSort.SelectionSort(arr);
 
         [Test, TestCaseSource("UnorderedToOrderedTestCases")]
-        public int[] BubbleSortReturnsSortedArray(int[] arr) => BubbleSort.Run(arr);
+        public int[] BubbleSortReturnsSortedArray(int[] arr) => MyBubbleSort.BubbleSort(arr);
     }
 }
