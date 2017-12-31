@@ -49,6 +49,7 @@
     <Compile Include="DataStructures\LIFOStack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToyExamples\DelimiterMatcher.cs" />
     <Compile Include="ToyExamples\StringReverser.cs" />
   </ItemGroup>
   <ItemGroup>
