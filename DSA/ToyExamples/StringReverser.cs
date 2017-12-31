@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//Uses LIFO stack to reverse a string
 namespace DSA.ToyExamples
 {
+    //Uses LIFO stack to reverse a string
     public class MyStringReverser
     {
         public string Reverse(string input)
