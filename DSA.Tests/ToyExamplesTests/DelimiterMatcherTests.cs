@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DSA.ToyExamples;
+using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,37 @@ using System.Threading.Tasks;
 
 namespace DSA.Tests
 {
+    [TestFixture]
     public class DelimiterMatcherTests
     {
+        [Test]
+        public void AcceptsString()
+        {
+            DelimiterMatcher delimiterMatcher = new DelimiterMatcher();
+            delimiterMatcher.IsBalanced("a");
+        }
+
+        [Test]
+        public void ReturnsTrueForSingleNonDelimiter()
+        {
+            DelimiterMatcher delimiterMatcher = new DelimiterMatcher();
+            bool result = delimiterMatcher.IsBalanced("a");
+            Assert.IsTrue(result);
+        }
+
+        [Test]
+        public void ReturnsFalseForSingleDelimiter()
+        {
+            DelimiterMatcher delimiterMatcher = new DelimiterMatcher();
+            bool result = delimiterMatcher.IsBalanced("(");
+            Assert.IsFalse(result);
+        }
+
+        public void ReturnsTrueForSinglePairOfBalancedDelimiters()
+        {
+            DelimiterMatcher delimiterMatcher = new DelimiterMatcher();
+            bool result = delimiterMatcher.IsBalanced("(");
+            Assert.IsFalse(result);
+        }
     }
 }
