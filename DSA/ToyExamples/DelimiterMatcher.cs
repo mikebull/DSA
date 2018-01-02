@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DSA.DataStructures;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,19 +9,32 @@ namespace DSA.ToyExamples
 {
     public class DelimiterMatcher
     {
-        string[] delimiters = new string[]
-        {
-            "[","]", "{", "}", "(", ")", "<", ">"
-        };
-
         //Checks balance of delimiting characters in a string using LIFO stack
         public bool IsBalanced(string input)
         {
-            if (input.Length == 1)
+            LIFOStack stack = new LIFOStack(input.Length);
+
+            string closeDelimiters = "]})>";
+            string openDelimiters = "[{(<";
+
+            for (int i = 0; i < openDelimiters.Length; i++)
             {
-                for (int i = 0; i < delimiters.Length; i++)
+                for (int j = 0; j < input.Length; j++)
                 {
-                    if (input == delimiters[i]) return false;
+                    if (input[j] == openDelimiters[i])
+                    {
+                        if (input.Length == 1) return false;
+                        stack.Push(input[j].ToString());
+                    }
+                    else if (input[j] == closeDelimiters[i])
+                    {
+                        if (input.Length == 1) return false;
+                        string lastDel = stack.Peek();
+                        for (int k = 0; k < openDelimiters.Length; k++)
+                        {
+                            if (openDelimiters[k].ToString() == lastDel && k != j) return false; 
+                        }
+                    }
                 }
             }
             return true;

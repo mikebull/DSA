@@ -34,10 +34,27 @@ namespace DSA.Tests
             Assert.IsFalse(result);
         }
 
+        [Test]
         public void ReturnsTrueForSinglePairOfBalancedDelimiters()
         {
             DelimiterMatcher delimiterMatcher = new DelimiterMatcher();
-            bool result = delimiterMatcher.IsBalanced("(");
+            bool result = delimiterMatcher.IsBalanced("()");
+            Assert.IsFalse(result);
+        }
+
+        [Test]
+        public void ReturnsFalseForUnbalancedString()
+        {
+            DelimiterMatcher delimiterMatcher = new DelimiterMatcher();
+            bool result = delimiterMatcher.IsBalanced("This(Is)An[UnbalancedString[");
+            Assert.IsFalse(result);
+        }
+
+        [Test]
+        public void ReturnsTrueForBalancedString()
+        {
+            DelimiterMatcher delimiterMatcher = new DelimiterMatcher();
+            bool result = delimiterMatcher.IsBalanced("<This(Is[A]balanced)String>");
             Assert.IsFalse(result);
         }
     }
