@@ -12,3 +12,4 @@ C# implementations of popular data structures and algorithms. Taking inspiration
 
 ## Toy Programs using DSA implementations
 * [String Reverser](https://github.com/ryanklee/DSA/blob/master/DSA/ToyExamples/StringReverser.cs)
+* [Delimiter matcher](https://github.com/ryanklee/DSA/blob/master/DSA/ToyExamples/DelimiterMatcher.cs)
