@@ -1,7 +1,7 @@
 # DSA (Data Structures & Algorithms)
 C# implementations of popular data structures and algorithms. Taking inspiration from [*Data Structures and Algorithms in Java*](http://a.co/48Cqup7), by Robert Lafore. Tested using TDD.
 
-# How to Run
+## How to Run
 
 Currently, the best way to run the immplentations and toy programs is to the run the tests in the test suite. The tests will pass. Depending on your disposition, this may be exciting. Make sure you have NUnit install via Nuget in Visual Studio 2017.
 
