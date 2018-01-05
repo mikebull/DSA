@@ -28,11 +28,11 @@ namespace DSA.Tests
         [Test]
         public void PushAPeekReturnsA()
         {
-            LIFOStack stack = new LIFOStack(10);
+            LIFOStack Stack = new LIFOStack(10);
             string element = "a";
 
-            stack.Push(element);
-            string result = stack.Peek();
+            Stack.Push(element);
+            string result = Stack.Peek();
 
             Assert.AreEqual(element, result);
         }
@@ -40,11 +40,11 @@ namespace DSA.Tests
         [Test]
         public void PushAPopPeekReturnsNull()
         {
-            LIFOStack stack = new LIFOStack(10);
+            LIFOStack Stack = new LIFOStack(10);
 
-            stack.Push("a");
-            stack.Pop();
-            string result = stack.Peek();
+            Stack.Push("a");
+            Stack.Pop();
+            string result = Stack.Peek();
 
             Assert.Null(result);
         }
@@ -52,15 +52,15 @@ namespace DSA.Tests
         [Test]
         public void PushAPushBPopPeekReturnsA()
         {
-            LIFOStack stack = new LIFOStack(10);
+            LIFOStack Stack = new LIFOStack(10);
 
             string firstPush = "a";
             string secondPush = "b";
 
-            stack.Push(firstPush);
-            stack.Push(secondPush);
-            stack.Pop();
-            string result = stack.Peek();
+            Stack.Push(firstPush);
+            Stack.Push(secondPush);
+            Stack.Pop();
+            string result = Stack.Peek();
 
             Assert.AreEqual(firstPush, result);
         }
@@ -68,45 +68,45 @@ namespace DSA.Tests
         [Test]
         public void PushPushPushPushPopPopPeekkReturnsSecondPush()
         {
-            LIFOStack stack = new LIFOStack(10);
+            LIFOStack Stack = new LIFOStack(10);
 
             string firstPush = "a";
             string secondPush = "b";
             string thirdPush = "c";
             string fourthPush = "d";
 
-            stack.Push(firstPush);
-            stack.Push(secondPush);
-            stack.Push(thirdPush);
-            stack.Push(fourthPush);
-            stack.Pop();
-            stack.Pop();
-            string result = stack.Peek();
+            Stack.Push(firstPush);
+            Stack.Push(secondPush);
+            Stack.Push(thirdPush);
+            Stack.Push(fourthPush);
+            Stack.Pop();
+            Stack.Pop();
+            string result = Stack.Peek();
             Assert.AreEqual(result, secondPush);
         }
 
         [Test]
         public void PopEmptyStackReturnsNull()
         {
-            LIFOStack stack = new LIFOStack(10);
+            LIFOStack Stack = new LIFOStack(10);
 
-            string result = stack.Pop();
+            string result = Stack.Pop();
         }
 
         [Test]
         public void IsEmptyReturnsFalseForEmptyStack()
         {
-            LIFOStack stack = new LIFOStack(10);
-            bool response = stack.IsEmpty();
+            LIFOStack Stack = new LIFOStack(10);
+            bool response = Stack.IsEmpty();
             Assert.IsTrue(response);
         }
 
         [Test]
         public void IsEmptyReturnsTrueForNonEmptyStack()
         {
-            LIFOStack stack = new LIFOStack(10);
-            stack.Push("a");
-            bool response = stack.IsEmpty();
+            LIFOStack Stack = new LIFOStack(10);
+            Stack.Push("a");
+            bool response = Stack.IsEmpty();
             Assert.IsFalse(response);
         }
 

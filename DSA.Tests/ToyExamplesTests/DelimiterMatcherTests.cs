@@ -9,47 +9,47 @@ namespace DSA.Tests
         [Test]
         public void AcceptsString()
         {
-            DelimiterMatcher delimiterMatcher = new DelimiterMatcher();
-            delimiterMatcher.IsBalanced("a");
+            DelimiterMatcher DelimiterMatcher = new DelimiterMatcher();
+            DelimiterMatcher.IsBalanced("a");
         }
 
         [Test]
         public void ReturnsTrueForSingleNonDelimiter()
         {
-            DelimiterMatcher delimiterMatcher = new DelimiterMatcher();
-            bool result = delimiterMatcher.IsBalanced("a");
+            DelimiterMatcher DelimiterMatcher = new DelimiterMatcher();
+            bool result = DelimiterMatcher.IsBalanced("a");
             Assert.IsTrue(result);
         }
 
         [Test]
         public void ReturnsFalseForSingleDelimiter()
         {
-            DelimiterMatcher delimiterMatcher = new DelimiterMatcher();
-            bool result = delimiterMatcher.IsBalanced("(");
+            DelimiterMatcher DelimiterMatcher = new DelimiterMatcher();
+            bool result = DelimiterMatcher.IsBalanced("(");
             Assert.IsFalse(result);
         }
 
         [Test]
         public void ReturnsTrueForSinglePairOfBalancedDelimiters()
         {
-            DelimiterMatcher delimiterMatcher = new DelimiterMatcher();
-            bool result = delimiterMatcher.IsBalanced("()");
+            DelimiterMatcher DelimiterMatcher = new DelimiterMatcher();
+            bool result = DelimiterMatcher.IsBalanced("()");
             Assert.IsFalse(result);
         }
 
         [Test]
         public void ReturnsFalseForUnbalancedString()
         {
-            DelimiterMatcher delimiterMatcher = new DelimiterMatcher();
-            bool result = delimiterMatcher.IsBalanced("This(Is)An[UnbalancedString[");
+            DelimiterMatcher DelimiterMatcher = new DelimiterMatcher();
+            bool result = DelimiterMatcher.IsBalanced("This(Is)An[UnbalancedString[");
             Assert.IsFalse(result);
         }
 
         [Test]
         public void ReturnsTrueForBalancedString()
         {
-            DelimiterMatcher delimiterMatcher = new DelimiterMatcher();
-            bool result = delimiterMatcher.IsBalanced("<This(Is[A]balanced)String>");
+            DelimiterMatcher DelimiterMatcher = new DelimiterMatcher();
+            bool result = DelimiterMatcher.IsBalanced("<This(Is[A]balanced)String>");
             Assert.IsFalse(result);
         }
     }

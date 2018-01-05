@@ -7,7 +7,7 @@ namespace DSA.ToyExamples
         //Checks balance of delimiting characters in a string using LIFO stack
         public bool IsBalanced(string input)
         {
-            LIFOStack stack = new LIFOStack(input.Length);
+            LIFOStack Stack = new LIFOStack(input.Length);
 
             string closeDelimiters = "]})>";
             string openDelimiters = "[{(<";
@@ -19,12 +19,12 @@ namespace DSA.ToyExamples
                     if (input[j] == openDelimiters[i])
                     {
                         if (input.Length == 1) return false;
-                        stack.Push(input[j].ToString());
+                        Stack.Push(input[j].ToString());
                     }
                     else if (input[j] == closeDelimiters[i])
                     {
                         if (input.Length == 1) return false;
-                        string lastDel = stack.Peek();
+                        string lastDel = Stack.Peek();
                         for (int k = 0; k < openDelimiters.Length; k++)
                         {
                             if (openDelimiters[k].ToString() == lastDel && k != j) return false; 

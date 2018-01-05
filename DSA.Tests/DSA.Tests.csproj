@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlgorithmsTests\BinarySearchTests.cs" />
+    <Compile Include="DataStructuresTests\CircularQueueTests.cs" />
     <Compile Include="ToyExamplesTests\DelimiterMatcherTests.cs" />
     <Compile Include="AlgorithmsTests\SortTests.cs" />
     <Compile Include="DataStructuresTests\LIFOStackTests.cs" />
