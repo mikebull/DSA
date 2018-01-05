@@ -2,12 +2,12 @@
 
 namespace DSA.DataStructures
 {
-    public class LIFOStack
+    public class Stack
     {
         private string[] elements;
         private int top = -1;
 
-        public LIFOStack(int size)
+        public Stack(int size)
         {
             if (size > 0) elements = new string[size];
             else throw new ArgumentException("Size must be > 0"); 

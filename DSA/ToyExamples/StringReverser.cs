@@ -7,7 +7,7 @@ namespace DSA.ToyExamples
     {
         public string Reverse(string input)
         {
-            LIFOStack Stack = new LIFOStack(input.Length);
+            Stack Stack = new Stack(input.Length);
 
             string reversed = "";
             for (int i = 0; i < input.Length; i++)
