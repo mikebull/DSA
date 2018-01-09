@@ -79,23 +79,6 @@ namespace DSA.Tests.DataStructuresTests
             Assert.AreEqual(firstElement, result);
         }
 
-        [Test]
-        public void Enqueue_Enqueue_Dequeue_Enqueue_Peek_ReturnsSecondEnqueue()
-        {
-            CircularQueue Queue = new CircularQueue(10);
-            string firstElement = _elements[0];
-            string secondElement = _elements[1];
-            string thirdElement = _elements[2];
-
-            Queue.Enqueue(firstElement);
-            Queue.Enqueue(secondElement);
-            Queue.Dequeue();
-            Queue.Enqueue(thirdElement);
-
-            string result = Queue.Peek();
-
-            Assert.AreEqual(secondElement, result);
-        }
 
         [Test]
         public void Enqueue_Enqueue_Size_Returns2()
@@ -113,7 +96,7 @@ namespace DSA.Tests.DataStructuresTests
         }
 
         [Test]
-        public void FillMaxSizeTenQueue_Dequeue_Enqueue_Peek_ReturnsSecondEnqueue()
+        public void WrapAroundWorks()
         {
             CircularQueue Queue = new CircularQueue(10);
 
@@ -124,27 +107,6 @@ namespace DSA.Tests.DataStructuresTests
             string result = Queue.Peek();
 
             Assert.AreEqual("2", result);
-        }
-
-        [Test]
-        public void FillQueue_EmptyQueue_Enqueue_Peek_ReturnsLastEnqueue()
-        {
-            CircularQueue Queue = new CircularQueue(4);
-
-            for (int i = 0; i < 4; i++)
-            {
-                Queue.Enqueue(_elements[i]);
-            }
-
-            for (int i = 0; i < 4; i++)
-            {
-                Queue.Dequeue();
-            }
-
-            string expected = "first after clear";
-            Queue.Enqueue(expected);
-            string result = Queue.Peek();
-            Assert.AreEqual(expected, result);
         }
 
         [Test]
@@ -169,6 +131,45 @@ namespace DSA.Tests.DataStructuresTests
             Queue.Dequeue(); //removes g
             string result = Queue.Peek();
             Assert.AreEqual("h", result);
+        }
+
+        [Test]
+        public void IsFullReturnsTrueOnFullQueue()
+        {
+            CircularQueue Queue = new CircularQueue(1);
+
+            Queue.Enqueue("a");
+            Assert.IsTrue(Queue.IsFull());
+
+        }
+
+        [Test]
+        public void IsFullReturnsFalseOnPartialQueue()
+        {
+            CircularQueue Queue = new CircularQueue(2);
+
+            Queue.Enqueue("a");
+            Assert.IsFalse(Queue.IsFull());
+
+        }
+
+        [Test]
+        public void IsEmptylReturnsFalseOnPartialQueue()
+        {
+            CircularQueue Queue = new CircularQueue(1);
+
+            Queue.Enqueue("a");
+            Assert.IsFalse(Queue.IsEmpty());
+
+        }
+
+        [Test]
+        public void IsEmptyReturnsTrueOnEmptyQueue()
+        {
+            CircularQueue Queue = new CircularQueue(2);
+
+            Assert.IsTrue(Queue.IsEmpty());
+
         }
     }
 }

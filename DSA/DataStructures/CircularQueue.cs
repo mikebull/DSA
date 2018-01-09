@@ -67,6 +67,24 @@ namespace DSA.DataStructures
             return Elements[Front];
         }
 
+        public bool IsFull()
+        {
+            if (ElementCount == MaxSize)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool IsEmpty()
+        {
+            if (ElementCount == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public int Size()
         {
             return ElementCount;
