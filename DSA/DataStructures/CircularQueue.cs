@@ -4,7 +4,7 @@ namespace DSA.DataStructures
 {
     public class CircularQueue
     {
-        private string[] _elements;
+        private string[] _items;
         private int _maxSize;
         private int _itemCount;
         private int _front;
@@ -14,7 +14,7 @@ namespace DSA.DataStructures
         {
             if (size > 0)
             {
-                _elements = new String[size];
+                _items = new String[size];
                 _maxSize = size;
                 _itemCount = 0;
                 _front = 0;
@@ -23,7 +23,7 @@ namespace DSA.DataStructures
             else throw new ArgumentException("Size must be > 0");
         }
 
-        public void Enqueue(string element)
+        public void Enqueue(string item)
         {
             if (this.Size() == _maxSize)
             {
@@ -34,7 +34,7 @@ namespace DSA.DataStructures
                 _back = -1;
             }
 
-            _elements[_back + 1] = element;
+            _items[_back + 1] = item;
             _back++;
             _itemCount++;
         }
@@ -46,8 +46,8 @@ namespace DSA.DataStructures
                 throw new ArgumentException("Queue is empty");
             }
 
-            string temp = _elements[_front];
-            _elements[_front] = null;
+            string temp = _items[_front];
+            _items[_front] = null;
 
             if (_front == _maxSize - 1)
             {
@@ -64,7 +64,7 @@ namespace DSA.DataStructures
 
         public string Peek()
         {
-            return _elements[_front];
+            return _items[_front];
         }
 
         public bool IsFull()
