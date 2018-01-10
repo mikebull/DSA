@@ -4,39 +4,39 @@ namespace DSA.DataStructures
 {
     public class CircularQueue
     {
-        private string[] Elements { get; set; }
-        private int MaxSize { get; set; }
-        private int ElementCount { get; set; }
-        private int Front { get; set; }
-        private int Back { get; set; }
+        private string[] _elements;
+        private int _maxSize;
+        private int _itemCount;
+        private int _front;
+        private int _back;
 
         public CircularQueue(int size)
         {
             if (size > 0)
             {
-                Elements = new String[size];
-                MaxSize = size;
-                ElementCount = 0;
-                Front = 0;
-                Back = -1;
+                _elements = new String[size];
+                _maxSize = size;
+                _itemCount = 0;
+                _front = 0;
+                _back = -1;
             }
             else throw new ArgumentException("Size must be > 0");
         }
 
         public void Enqueue(string element)
         {
-            if (this.Size() == MaxSize)
+            if (this.Size() == _maxSize)
             {
                 throw new ArgumentException("Queue is full");
             }
-            else if (Back == MaxSize - 1)
+            else if (_back == _maxSize - 1)
             {
-                Back = -1;
+                _back = -1;
             }
 
-            Elements[Back + 1] = element;
-            Back++;
-            ElementCount++;
+            _elements[_back + 1] = element;
+            _back++;
+            _itemCount++;
         }
 
         public string Dequeue()
@@ -46,30 +46,30 @@ namespace DSA.DataStructures
                 throw new ArgumentException("Queue is empty");
             }
 
-            string temp = Elements[Front];
-            Elements[Front] = null;
+            string temp = _elements[_front];
+            _elements[_front] = null;
 
-            if (Front == MaxSize - 1)
+            if (_front == _maxSize - 1)
             {
-                Front = 0;
+                _front = 0;
             }
             else
             {
-                Front++;
+                _front++;
             }
 
-            ElementCount--;
+            _itemCount--;
             return temp;
         }
 
         public string Peek()
         {
-            return Elements[Front];
+            return _elements[_front];
         }
 
         public bool IsFull()
         {
-            if (ElementCount == MaxSize)
+            if (_itemCount == _maxSize)
             {
                 return true;
             }
@@ -78,7 +78,7 @@ namespace DSA.DataStructures
 
         public bool IsEmpty()
         {
-            if (ElementCount == 0)
+            if (_itemCount == 0)
             {
                 return true;
             }
@@ -87,7 +87,7 @@ namespace DSA.DataStructures
 
         public int Size()
         {
-            return ElementCount;
+            return _itemCount;
         }
     }
 }

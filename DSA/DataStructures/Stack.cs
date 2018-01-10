@@ -4,12 +4,12 @@ namespace DSA.DataStructures
 {
     public class Stack
     {
-        public string[] Elements{ get; set; }
+        public string[] _elements;
         private int top = -1;
 
         public Stack(int size)
         {
-            if (size > 0) Elements = new string[size];
+            if (size > 0) _elements = new string[size];
             else throw new ArgumentException("Size must be > 0"); 
         }
 
@@ -22,20 +22,20 @@ namespace DSA.DataStructures
         public void Push(string element)
         {
             top++;
-            Elements[top] = element;
+            _elements[top] = element;
         }
 
         public string Peek()
         {
             if (this.IsEmpty()) return null;
-            else return Elements[top];
+            else return _elements[top];
         }
 
         public string Pop()
         {
             if (this.IsEmpty()) return null;
-            string temp = Elements[top];
-            Elements[top--] = null;
+            string temp = _elements[top];
+            _elements[top--] = null;
             return temp;
         }
     }
