@@ -15,7 +15,8 @@ A console, char-based visualization frontend for the implementations is planned.
 
 ## Data Structures
 * [Stack](https://github.com/ryanklee/DSA/blob/master/DSA/DataStructures/LIFOStack.cs)
-* [Circular Queue](https://github.com/ryanklee/DSA/blob/master/DSA/DataStructures/CircularQueue.cs) 
+* [Circular Queue](https://github.com/ryanklee/DSA/blob/master/DSA/DataStructures/CircularQueue.cs)
+* [Priority Queue](https://github.com/ryanklee/DSA/blob/master/DSA/DataStructures/PriorityQueue.cs)
 
 ## Toy Programs using DSA implementations
 * [String Reverser](https://github.com/ryanklee/DSA/blob/master/DSA/ToyExamples/StringReverser.cs)
