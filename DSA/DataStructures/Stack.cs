@@ -27,13 +27,13 @@ namespace DSA.DataStructures
 
         public string Peek()
         {
-            if (this.IsEmpty()) return null;
+            if (_top == -1) return null;
             else return _items[_top];
         }
 
         public string Pop()
         {
-            if (this.IsEmpty()) return null;
+            if (_top == -1) return null;
             string temp = _items[_top];
             _items[_top--] = null;
             return temp;
