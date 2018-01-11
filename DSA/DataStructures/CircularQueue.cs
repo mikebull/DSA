@@ -25,7 +25,7 @@ namespace DSA.DataStructures
 
         public void Enqueue(string item)
         {
-            if (this.Size() == _maxSize)
+            if (_itemCount == _maxSize)
             {
                 throw new ArgumentException("Queue is full");
             }
@@ -41,7 +41,7 @@ namespace DSA.DataStructures
 
         public string Dequeue()
         {
-            if (this.Size() == 0)
+            if (_itemCount == 0)
             {
                 throw new ArgumentException("Queue is empty");
             }
