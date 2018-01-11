@@ -5,7 +5,7 @@ namespace DSA.DataStructures
     public class Stack
     {
         public string[] _items;
-        private int top = -1;
+        private int _top = -1;
 
         public Stack(int size)
         {
@@ -15,27 +15,27 @@ namespace DSA.DataStructures
 
         public bool IsEmpty()
         {
-            if (top == -1) return true;
+            if (_top == -1) return true;
             else return false;
         }
 
         public void Push(string item)
         {
-            top++;
-            _items[top] = item;
+            _top++;
+            _items[_top] = item;
         }
 
         public string Peek()
         {
             if (this.IsEmpty()) return null;
-            else return _items[top];
+            else return _items[_top];
         }
 
         public string Pop()
         {
             if (this.IsEmpty()) return null;
-            string temp = _items[top];
-            _items[top--] = null;
+            string temp = _items[_top];
+            _items[_top--] = null;
             return temp;
         }
     }
