@@ -140,7 +140,6 @@ namespace DSA.Tests.DataStructuresTests
 
             Queue.Enqueue("a");
             Assert.IsTrue(Queue.IsFull());
-
         }
 
         [Test]
@@ -150,7 +149,6 @@ namespace DSA.Tests.DataStructuresTests
 
             Queue.Enqueue("a");
             Assert.IsFalse(Queue.IsFull());
-
         }
 
         [Test]
@@ -160,7 +158,6 @@ namespace DSA.Tests.DataStructuresTests
 
             Queue.Enqueue("a");
             Assert.IsFalse(Queue.IsEmpty());
-
         }
 
         [Test]
@@ -169,7 +166,6 @@ namespace DSA.Tests.DataStructuresTests
             CircularQueue Queue = new CircularQueue(2);
 
             Assert.IsTrue(Queue.IsEmpty());
-
         }
     }
 }
