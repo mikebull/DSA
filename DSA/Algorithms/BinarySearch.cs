@@ -22,9 +22,9 @@
          
             while (true) 
             {
-                int guessIndex = (floor + ceiling) / 2;//guess midpoint in search spacce
-                if (arr[guessIndex] == target) return true;//guess is correct? return true
-                else if (floor > ceiling) return false;//exhausted our search space?
+                int guessIndex = (floor + ceiling) / 2; //guess midpoint in search spacce
+                if (arr[guessIndex] == target) return true; //guess is correct? return true
+                else if (floor > ceiling) return false; //exhausted our search space?
                 else
                 {
                     if (arr[guessIndex] < target) floor = guessIndex + 1; //guess is too low? raise floor
