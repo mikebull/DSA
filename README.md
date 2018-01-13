@@ -7,7 +7,7 @@ As mentioned, my primary reference is *Data Structures and Algorithms in Java*, 
 
 I can't recommend it enough, especially since it's almost never mentioned. I think it's the best textbook on data structures and algorithms I've come across for those without a working knowledge of the math, e.g. linear algebra, one generally finds in such books. It manages, despite the un-mathy presentation, to be very thorough.
 
-Disregard the fact that it uses Java as a language if you find yourself saying "I don't know Java" -- don't know Java and I can read the example implementations just fine. The language choice is totally irrelevant as long as you have a basic understanding of OOP concepts (which the book actually takes time to introduce should you not).
+Disregard the fact that it uses Java as a language if you find yourself saying "I don't know Java". The language choice is totally irrelevant as long as you have a basic understanding of OOP concepts (which the book actually takes time to introduce should you not).
 
 [*Cracking the Coding Interview*, by Gayle Laakman McDowell](http://a.co/i4kVn6P) is also worth a look, but I wouldn't recommend it as a standalone introductory volume. It's best used to refocus or reinforce an already sufficient understanding of algorithm analysis specifically for the purpose of interviewing.
 
