@@ -3,9 +3,9 @@ C# implementations of various data structures and algorithms. Regularly updated.
 
 ## Note on Resources
 
-As mentioned, my primary reference is *Data Structures and Algorithms in Java*, by Robert LaFore.
+As mentioned, my primary reference is *Data Structures and Algorithms in Java*, by Robert LaFore. I can't recommend it enough, especially since it's almost never mentioned.
 
-I can't recommend it enough, especially since it's almost never mentioned. I think it's the best textbook on data structures and algorithms I've come across for those without a working knowledge of the math, e.g. linear algebra, one generally finds in such books. It manages, despite the un-mathy presentation, to be very thorough.
+It's the best textbook on data structures and algorithms I've come across for those without a working knowledge of the math, e.g. linear algebra, one generally finds in such books. It manages, despite the un-mathy presentation, to be very thorough.
 
 Disregard the fact that it uses Java as a language if you find yourself saying "I don't know Java". The language choice is totally irrelevant as long as you have a basic understanding of OOP concepts (which the book actually takes time to introduce should you not).
 
