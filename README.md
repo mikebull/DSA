@@ -17,7 +17,7 @@ If you are in need of a very accessible, but in no way patronizing introduction,
 
 Currently, the best way to run the implementations is to first confirm you have NUnit installed via Nuget in Visual Studio, then run the tests in the test suite. The tests will pass. Depending on your disposition, this may be exciting.
 
-A console, char-based visualization frontend for the implementations is planned. 
+---
 
 ## Algorithms
 * [Binary Search](https://github.com/ryanklee/DSA/blob/master/DSA/Algorithms/BinarySearch.cs)
@@ -33,3 +33,18 @@ A console, char-based visualization frontend for the implementations is planned.
 ## Toy Programs using DSA implementations
 * [String Reverser](https://github.com/ryanklee/DSA/blob/master/DSA/ToyExamples/StringReverser.cs)
 * [Delimiter matcher](https://github.com/ryanklee/DSA/blob/master/DSA/ToyExamples/DelimiterMatcher.cs)
+
+---
+
+## Todo
+- [ ] Add in-code summary and comments to existing implementations
+     - [x] Binary search
+     - [ ] Bubble sort
+     - [ ] Selection sort
+     - [ ] Insertion sort
+     - [ ] Cicular queue
+     - [ ] Priority queue
+     - [ ] String reverser
+     - [ ] Delimiter matcher
+- [ ] Postfix Arithmetic Parser
+- [ ] Console frontend for visualization purposes
