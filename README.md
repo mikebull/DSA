@@ -1,7 +1,7 @@
 # DSA (Data Structures & Algorithms)
 C# implementations of various data structures and algorithms. Regularly updated. Taking inspiration from [*Data Structures and Algorithms in Java*](http://a.co/48Cqup7), by Robert Lafore. Developed using TDD.
 
-## Note to Those Looking for Resources
+## Note on Resources
 
 As mentioned, my primary reference is *Data Structures and Algorithms in Java*, by Robert LaFore.
 
