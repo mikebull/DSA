@@ -17,18 +17,18 @@
     {
         public static bool BinarySearch(int[] arr, int target)
         {
-            int floor = arr[0]; //set floor/ceiling
-            int ceiling = arr.Length - 1; //to min/max indices
+            int floor = arr[0]; 
+            int ceiling = arr.Length - 1;
          
             while (true) 
             {
-                int guessIndex = (floor + ceiling) / 2; //set guess index to midpoint in search spacce
-                if (arr[guessIndex] == target) return true; //guess is correct? return true
-                else if (floor > ceiling) return false; //exhausted our search space?
+                int guessIndex = (floor + ceiling) / 2; 
+                if (arr[guessIndex] == target) return true;
+                else if (floor > ceiling) return false; 
                 else
                 {
-                    if (arr[guessIndex] < target) floor = guessIndex + 1; //guess is too low? raise floor
-                    else ceiling = guessIndex - 1; //guess is too high? lower ceiing
+                    if (arr[guessIndex] < target) floor = guessIndex + 1;
+                    else ceiling = guessIndex - 1; 
                 }
             }
         }
