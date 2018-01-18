@@ -1,6 +1,6 @@
 ﻿namespace DSA.Algorithms
 {
-    // Binary search is a fast, simplle, and intuitive algorithm that searches for a 
+    // Binary search is a fast, simple, and intuitive algorithm that searches for a 
     // value over a sorted array. The way it works is as follows:
     //
     //   (0) Set floor to first index of array, and ceiling to last
