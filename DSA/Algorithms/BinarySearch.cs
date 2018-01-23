@@ -1,5 +1,6 @@
 ﻿namespace DSA.Algorithms
 {
+    /// <summary>
     /// Binary search is a fast, simple, and intuitive algorithm that searches for a 
     /// value over a sorted array. The way it works is as follows:
     ///
@@ -12,6 +13,7 @@
     /// The most important thing to note is that this algorithm reduces 
     /// the search space by half every iteration (at step 2 or 3). This makes
     /// it very fast, running in O(log n) time.
+    /// </summary>
 
     public static class MyBinarySearch
     {
