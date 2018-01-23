@@ -1,4 +1,8 @@
-﻿namespace DSA.Algorithms
+﻿/// <summary>
+/// 
+/// </summary>
+
+namespace DSA.Algorithms
 {
     public static class MyBubbleSort
     {
