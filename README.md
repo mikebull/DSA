@@ -42,7 +42,7 @@ Currently, the best way to run the implementations is to first confirm you have 
      - [X] Bubble sort
      - [ ] Selection sort
      - [ ] Insertion sort
-     - [ ] Cicular queue
+     - [ ] Circular queue
      - [ ] Priority queue
      - [ ] String reverser
      - [ ] Delimiter matcher
