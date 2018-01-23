@@ -39,7 +39,7 @@ Currently, the best way to run the implementations is to first confirm you have 
 ## Todo
 - [ ] Add in-code summary and comments to existing implementations
      - [x] Binary search
-     - [ ] Bubble sort
+     - [X] Bubble sort
      - [ ] Selection sort
      - [ ] Insertion sort
      - [ ] Cicular queue
