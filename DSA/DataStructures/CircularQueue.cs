@@ -2,10 +2,10 @@
 
 namespace DSA.DataStructures
 {
-    public class CircularQueue
+    public class CircularQueue<T>
     {
-        private string[] _items;
-        private int _maxSize;
+        private readonly T[] _items;
+        private readonly int _maxSize;
         private int _itemCount;
         private int _front;
         private int _back;
@@ -14,16 +14,19 @@ namespace DSA.DataStructures
         {
             if (size > 0)
             {
-                _items = new String[size];
+                _items = new T[size];
                 _maxSize = size;
                 _itemCount = 0;
                 _front = 0;
                 _back = -1;
             }
-            else throw new ArgumentException("Size must be > 0");
+            else
+            {
+                throw new ArgumentException("Size must be > 0");
+            }
         }
 
-        public void Enqueue(string item)
+        public void Enqueue(T item)
         {
             if (_itemCount == _maxSize)
             {
@@ -39,15 +42,15 @@ namespace DSA.DataStructures
             _itemCount++;
         }
 
-        public string Dequeue()
+        public T Dequeue()
         {
             if (_itemCount == 0)
             {
                 throw new ArgumentException("Queue is empty");
             }
 
-            string temp = _items[_front];
-            _items[_front] = null;
+            T temp = _items[_front];
+            _items[_front] = default(T);
 
             if (_front == _maxSize - 1)
             {
@@ -62,7 +65,7 @@ namespace DSA.DataStructures
             return temp;
         }
 
-        public string Peek()
+        public T Peek()
         {
             return _items[_front];
         }

@@ -8,7 +8,7 @@ namespace DSA.Tests.DataStructuresTests
     [TestFixture]
     public class CircularQueueTests
     {
-        private static List<String> _elements = new List<String>()
+        private static readonly List<String> _elements = new List<String>()
         {
             "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"
         };
@@ -16,14 +16,14 @@ namespace DSA.Tests.DataStructuresTests
         [Test]
         public void CanEnqueueOneElement()
         {
-            CircularQueue Queue = new CircularQueue(10);
+            var Queue = new CircularQueue<string>(10);
             Queue.Enqueue(_elements[0]);
         }
 
         [Test]
         public void CanEnqueueTwoElements()
         {
-            CircularQueue Queue = new CircularQueue(10);
+            var Queue = new CircularQueue<string>(10);
             Queue.Enqueue(_elements[0]);
             Queue.Enqueue(_elements[1]);
         }
@@ -31,19 +31,16 @@ namespace DSA.Tests.DataStructuresTests
         [Test]
         public void Enqueue_PeekReturnsFirstEnqueue()
         {
-            CircularQueue Queue = new CircularQueue(10);
-
+            var Queue = new CircularQueue<string>(10);
             Queue.Enqueue(_elements[0]);
-
             string result = Queue.Peek();
-
             Assert.AreEqual(_elements[0], result);
         }
 
         [Test]
         public void Enqueue_Enqueue_Peek_ReturnsFirstEnqueue()
         {
-            CircularQueue Queue = new CircularQueue(10);
+            var Queue = new CircularQueue<string>(10);
             string firstElement = _elements[0];
             string secondElement = _elements[1];
 
@@ -51,31 +48,25 @@ namespace DSA.Tests.DataStructuresTests
             Queue.Enqueue(secondElement);
 
             string result = Queue.Peek();
-
             Assert.AreEqual(firstElement, result);
         }
 
         [Test]
         public void AddingMoreThanMaxSizeThrowsException()
         {
-            CircularQueue Queue = new CircularQueue(10);
-
+            var Queue = new CircularQueue<string>(10);
             foreach (var element in _elements) Queue.Enqueue(element);
-
             void a() => Queue.Enqueue("OneTooMany");
-
             Assert.Throws(typeof(ArgumentException), new TestDelegate(a));
         }
 
         [Test]
         public void Enqueue_Dequeue_ReturnsFirstEnqueue()
         {
-            CircularQueue Queue = new CircularQueue(10);
+            var Queue = new CircularQueue<string>(10);
             string firstElement = _elements[0];
-
             Queue.Enqueue(firstElement);
             string result = Queue.Dequeue();
-
             Assert.AreEqual(firstElement, result);
         }
 
@@ -83,36 +74,30 @@ namespace DSA.Tests.DataStructuresTests
         [Test]
         public void Enqueue_Enqueue_Size_Returns2()
         {
-            CircularQueue Queue = new CircularQueue(10);
-
+            var Queue = new CircularQueue<string>(10);
             for (int i = 0; i < 2; i++)
             {
                 Queue.Enqueue(_elements[i]);
             }
-
             int result = Queue.Size();
-
             Assert.AreEqual(2, result);
         }
 
         [Test]
         public void WrapAroundWorks()
         {
-            CircularQueue Queue = new CircularQueue(10);
-
+            var Queue = new CircularQueue<string>(10);
             foreach (var element in _elements) Queue.Enqueue(element);
-
             Queue.Dequeue();
             Queue.Enqueue("a");
             string result = Queue.Peek();
-
             Assert.AreEqual("2", result);
         }
 
         [Test]
         public void VariousQueue_Enqueue()
         {
-            CircularQueue Queue = new CircularQueue(4);
+            var Queue = new CircularQueue<string>(4);
 
             Queue.Enqueue("a");
             Queue.Enqueue("b");
@@ -136,8 +121,7 @@ namespace DSA.Tests.DataStructuresTests
         [Test]
         public void IsFullReturnsTrueOnFullQueue()
         {
-            CircularQueue Queue = new CircularQueue(1);
-
+            var Queue = new CircularQueue<string>(1);
             Queue.Enqueue("a");
             Assert.IsTrue(Queue.IsFull());
         }
@@ -145,8 +129,7 @@ namespace DSA.Tests.DataStructuresTests
         [Test]
         public void IsFullReturnsFalseOnPartialQueue()
         {
-            CircularQueue Queue = new CircularQueue(2);
-
+            var Queue = new CircularQueue<string>(2);
             Queue.Enqueue("a");
             Assert.IsFalse(Queue.IsFull());
         }
@@ -154,8 +137,7 @@ namespace DSA.Tests.DataStructuresTests
         [Test]
         public void IsEmptylReturnsFalseOnPartialQueue()
         {
-            CircularQueue Queue = new CircularQueue(1);
-
+            var Queue = new CircularQueue<string>(1);
             Queue.Enqueue("a");
             Assert.IsFalse(Queue.IsEmpty());
         }
@@ -163,8 +145,7 @@ namespace DSA.Tests.DataStructuresTests
         [Test]
         public void IsEmptyReturnsTrueOnEmptyQueue()
         {
-            CircularQueue Queue = new CircularQueue(2);
-
+            var Queue = new CircularQueue<string>(2);
             Assert.IsTrue(Queue.IsEmpty());
         }
     }
