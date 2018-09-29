@@ -2,14 +2,14 @@
 
 namespace DSA.DataStructures
 {
-    public class Stack
+    public class Stack<T>
     {
-        public string[] _items;
+        public T[] _items;
         private int _top = -1;
 
         public Stack(int size)
         {
-            if (size > 0) _items = new string[size];
+            if (size > 0) _items = new T[size];
             else throw new ArgumentException("Size must be > 0"); 
         }
 
@@ -19,23 +19,23 @@ namespace DSA.DataStructures
             else return false;
         }
 
-        public void Push(string item)
+        public void Push(T item)
         {
             _top++;
             _items[_top] = item;
         }
 
-        public string Peek()
+        public T Peek()
         {
-            if (_top == -1) return null;
+            if (_top == -1) return default(T);
             else return _items[_top];
         }
-
-        public string Pop()
+   
+        public T Pop()
         {
-            if (_top == -1) return null;
-            string temp = _items[_top];
-            _items[_top--] = null;
+            if (_top == -1) return default(T);
+            T temp = _items[_top];
+            _items[_top--] = default(T);
             return temp;
         }
     }

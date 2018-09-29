@@ -4,10 +4,9 @@ namespace DSA.ToyExamples
 {
     public class DelimiterMatcher
     {
-        //Checks balance of delimiting characters in a string using LIFO stack
         public bool IsBalanced(string input)
         {
-            Stack Stack = new Stack(input.Length);
+            var Stack = new Stack<string>(input.Length);
 
             string closeDelimiters = "]})>";
             string openDelimiters = "[{(<";

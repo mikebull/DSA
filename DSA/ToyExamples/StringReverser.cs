@@ -7,17 +7,17 @@ namespace DSA.ToyExamples
     {
         public string Reverse(string input)
         {
-            Stack Stack = new Stack(input.Length);
+            var Stack = new Stack<string>(input.Length);
 
-            string reversed = "";
-            for (int i = 0; i < input.Length; i++)
+            var reversed = "";
+            for (var i = 0; i < input.Length; i++)
             {
                 Stack.Push(input[i].ToString());
             }
 
-            for (int i = 0; i < input.Length; i++)
+            for (var i = 0; i < input.Length; i++)
             {
-                reversed = reversed + Stack.Pop();
+                reversed += Stack.Pop();
             }
 
             return reversed;
