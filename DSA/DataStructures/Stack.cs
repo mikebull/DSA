@@ -15,8 +15,7 @@ namespace DSA.DataStructures
 
         public bool IsEmpty()
         {
-            if (_top == -1) return true;
-            else return false;
+            return _top == -1;
         }
 
         public void Push(T item)
