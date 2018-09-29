@@ -1,8 +1,8 @@
 ﻿namespace DSA.Algorithms
 {
-    public static class MyInsertionSort
+    public static class InsertionSort
     {
-        public static int[] InsertionSort(int[] arr)
+        public static int[] Sort(int[] arr)
         {
             for (int i = 1; i < arr.Length; i++)
             {

@@ -1,8 +1,8 @@
 ﻿namespace DSA.Algorithms
 {
-    public static class MySelectionSort
+    public static class SelectionSort
     {
-        public static int[] SelectionSort(int[] arr)
+        public static int[] Sort(int[] arr)
         {
             for (int i = 0; i < arr.Length; i++)
             {

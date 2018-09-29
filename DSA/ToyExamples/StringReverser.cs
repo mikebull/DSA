@@ -2,8 +2,7 @@
 
 namespace DSA.ToyExamples
 {
-    //Uses LIFO stack to reverse a string
-    public class MyStringReverser
+    public class StringReverser
     {
         public string Reverse(string input)
         {

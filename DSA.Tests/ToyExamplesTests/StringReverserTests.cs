@@ -9,7 +9,7 @@ namespace DSA.Tests
         [Test]
         public void ReturnsSingleCharacter()
         {
-            MyStringReverser stringReverser = new MyStringReverser();
+            StringReverser stringReverser = new StringReverser();
 
             string result = stringReverser.Reverse("a");
             string expectedResult = "a";
@@ -20,7 +20,7 @@ namespace DSA.Tests
         [Test]
         public void ReversesTwoCharacters()
         {
-            MyStringReverser stringReverser = new MyStringReverser();
+            StringReverser stringReverser = new StringReverser();
 
             string result = stringReverser.Reverse("ab");
             string expectedResult = "ba";
@@ -31,7 +31,7 @@ namespace DSA.Tests
         [Test]
         public void ReversesFiveCharacters()
         {
-            MyStringReverser stringReverser = new MyStringReverser();
+            StringReverser stringReverser = new StringReverser();
 
             string result = stringReverser.Reverse("abcde");
             string expectedResult = "edcba";

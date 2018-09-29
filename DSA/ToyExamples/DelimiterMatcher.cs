@@ -8,8 +8,8 @@ namespace DSA.ToyExamples
         {
             var Stack = new Stack<string>(input.Length);
 
-            string closeDelimiters = "]})>";
-            string openDelimiters = "[{(<";
+            var closeDelimiters = "]})>";
+            var openDelimiters = "[{(<";
 
             for (int i = 0; i < openDelimiters.Length; i++)
             {

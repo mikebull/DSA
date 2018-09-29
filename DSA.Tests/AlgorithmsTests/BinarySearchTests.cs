@@ -17,7 +17,7 @@ namespace DSA.Tests
         public void BinarySearchReturnsTargetValue(int target, bool expected)
         {
             int[] orderedArray = Enumerable.Range(1, 100).ToArray();
-            bool result = MyBinarySearch.BinarySearch(orderedArray, target);
+            bool result = BinarySearch.Search(orderedArray, target);
             Assert.AreEqual(expected, result);
         }
     }
