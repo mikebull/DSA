@@ -72,20 +72,12 @@ namespace DSA.DataStructures
 
         public bool IsFull()
         {
-            if (_itemCount == _maxSize)
-            {
-                return true;
-            }
-            return false;
+            return _itemCount == _maxSize;
         }
 
         public bool IsEmpty()
         {
-            if (_itemCount == 0)
-            {
-                return true;
-            }
-            return false;
+            return _itemCount == 0;
         }
 
         public int Size()
