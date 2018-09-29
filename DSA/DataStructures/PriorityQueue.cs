@@ -76,14 +76,12 @@ namespace DSA.DataStructures
 
         public bool IsEmpty()
         {
-            if (_count == 0) return true;
-            else return false;
+            return _count == 0;
         }
 
         public bool IsFull()
         {
-            if (_count == _maxSize) return true;
-            else return false;
+            return _count == _maxSize;
         }
     }
 }
