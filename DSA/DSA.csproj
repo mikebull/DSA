@@ -45,6 +45,7 @@
     <Compile Include="Algorithms\BinarySearch.cs" />
     <Compile Include="Algorithms\BubbleSort.cs" />
     <Compile Include="Algorithms\InsertionSort.cs" />
+    <Compile Include="Algorithms\Partition.cs" />
     <Compile Include="Algorithms\SelectionSort.cs" />
     <Compile Include="DataStructures\CircularQueue.cs" />
     <Compile Include="DataStructures\PriorityQueue.cs" />
