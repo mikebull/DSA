@@ -4,25 +4,42 @@ namespace DSA.Algorithms
 {
     public class Partition
     {
-        public int Part(int pivot, List<int> nums)
+        public List<int> Part(int pivot, List<int> nums)
         {
-            var leftPtr = 0;
-            var rghtPtr = nums.Count - 1;
+            var lPtr = -1;
+            var rPtr = nums.Count;
 
             while (true)
             {
+                while (lPtr < nums.Count - 1
+                       && nums[++lPtr] < pivot)
+                {
+                }
 
+                while (rPtr > 0
+                       && nums[--rPtr] > pivot)
+                {
+                }
+
+                if (lPtr >= rPtr)
+                {
+                    break;
+                }
+                else
+                {
+                    Swap(ref nums, lPtr, rPtr);
+                }
             }
 
-            return 1;
+            return nums;
         }
 
-        private static List<int> Swap(List<int> nums, int j, int i)
+        private static List<T> Swap<T>(ref List<T> n, int j, int i)
         {
-            var tmp = nums[i];
-            nums[i] = nums[j];
-            nums[j] = tmp;
-            return nums;
+            var tmp = n[i];
+            n[i] = n[j];
+            n[j] = tmp;
+            return n;
         }
     }
 }

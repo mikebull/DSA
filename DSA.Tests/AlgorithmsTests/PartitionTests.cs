@@ -17,16 +17,14 @@ namespace DSA.Tests.AlgorithmsTests
         {
             var partition = new Partition();
 
-            var nums = partition.Part(new List<int> { 3, 1, 10, 5, 6, 9, 8, 1, 5, 8, 4 });
+            var pivot = 8;
 
-            var firstHalf = nums.Take(nums.Count / 2);
-            var partVal = nums[nums.Count / 2];
-            var lastHalf = nums.Skip(nums.Count / 2);
+            var nums = partition.Part(pivot, new List<int> { 7, 9, 4, 8, 10, 15, 13, 12, 6 });
 
-            var allLess = firstHalf.All(num => num <= partVal);
-            var allMore = lastHalf.All(num => num >= partVal);
+            var result = nums.SkipWhile(n => n < pivot)
+                             .All(n => n >= pivot);
 
-            Assert.IsTrue(allLess && allMore);
+            Assert.IsTrue(result);
         }
 
     }
